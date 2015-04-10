@@ -1,6 +1,6 @@
 var compileCSS = require('broccoli-postcss');
-var cssnext = require('cssnext');
+var nested = require('postcss-nested');
 
 module.exports = compileCSS(['src/stylesheets'], 'screen.css', 'stylesheets/screen.css', [{
-  module: cssnext
+  module: nested
 }]);
