@@ -1,0 +1,16 @@
+{
+  "name": "jcartledge.website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "broccoli": "^0.15.3",
+    "broccoli-postcss": "^1.1.0",
+    "cssnext": "^1.2.3"
+  }
+}
