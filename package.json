@@ -12,6 +12,7 @@
     "broccoli": "^0.15.3",
     "broccoli-postcss": "^1.1.0",
     "cssnext": "^1.2.3",
+    "postcss-import": "^5.1.1",
     "postcss-nested": "^0.2.2"
   }
 }

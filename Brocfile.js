@@ -1,6 +1,11 @@
 var compileCSS = require('broccoli-postcss');
-var nested = require('postcss-nested');
+var cssPlugins = [
+  {module: require('postcss-nested')},
+  {module: require('postcss-import')}
+];
 
-module.exports = compileCSS(['src/stylesheets'], 'screen.css', 'stylesheets/screen.css', [{
-  module: nested
-}]);
+module.exports = compileCSS(
+  ['src/stylesheets'],
+  'screen.css',
+  'stylesheets/screen.css',
+  cssPlugins);
