@@ -1,3 +1,10 @@
 {
-  "name": "jcartledge-website"
+  "name": "jcartledge-website",
+  "exclude": [
+    ".gitignore",
+    "Brocfile.js",
+    "package.json",
+    "node_modules",
+    "src"
+  ]
 }
