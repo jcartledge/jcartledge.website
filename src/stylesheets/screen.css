@@ -1,7 +1,7 @@
 @import "components/hello-sticker";
 
 article {
-  p {
+  > p {
     text-align: center;
     font-family: Sanchez, serif;
     max-width: 570px;
@@ -9,9 +9,16 @@ article {
     text-align: justify;
     font-size: 1em;
   }
-  p.first {
+  > p.first {
     font-weight: bold;
     font-size: 1.1em;
+  }
+  > hr {
+    max-width: 200px;
+    margin-top: 2em;
+    border: 0;
+    border-bottom: 2px dotted darkseagreen;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.14);
   }
 }
 
