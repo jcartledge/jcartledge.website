@@ -1,0 +1,44 @@
+.hello-sticker {
+  background-color: darkseagreen;
+  color: white;
+  max-width: 400px;
+  text-align: center;
+  padding: 1.5em 0;
+  border-radius: 25px;
+  border: 5px solid white;
+  box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.14);
+  margin: 2em auto;
+  font-family: 'Montserrat', sans-serif;
+
+  > .hello {
+    line-height: 0;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: .4em 0;
+    font-weight: bold;
+  }
+
+  > .mynameis {
+    font-size: 24px;
+    margin: .4em 0;
+  }
+
+  > .name {
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: .6em 0;
+    font-family: 'Rock Salt', cursive;
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .hello-sticker {
+    > .hello {font-size: 32px; }
+    > .mynameis {font-size: 18px; }
+    > .name {font-size: 24px; }
+  }
+}
