@@ -1,7 +1,7 @@
 var compileCSS = require('broccoli-postcss');
 var cssPlugins = [
-  {module: require('postcss-nested')},
-  {module: require('postcss-import')}
+  {module: require('postcss-import')},
+  {module: require('postcss-nested')}
 ];
 
 module.exports = compileCSS(
