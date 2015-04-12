@@ -1,11 +1,17 @@
 @import "components/hello-sticker";
 
 html, body {
+  margin: 0;
   width: 100%;
   height: 100%;
   color: rgba(0, 30, 0, 0.9);
-  background-color: rgba(255, 255, 250, 1.0)
+  background-color: rgba(255, 255, 250, 1.0);
 }
+
+header {
+  padding-top: 2em;
+}
+
 article {
   font-size: 17px;
 
