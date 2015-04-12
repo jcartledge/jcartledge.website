@@ -3,7 +3,7 @@
   color: white;
   max-width: 400px;
   text-align: center;
-  padding: 1.5em 0;
+  padding: 24px 0;
   border-radius: 25px;
   border: 5px solid white;
   box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.1);
@@ -11,6 +11,7 @@
   font-family: 'Montserrat', sans-serif;
 
   > .hello {
+    display: block;
     line-height: 0;
     text-transform: uppercase;
     font-size: 40px;
@@ -19,11 +20,13 @@
   }
 
   > .mynameis {
+    display: block;
     font-size: 24px;
     margin: .4em 0;
   }
 
   > .name {
+    display: block;
     width: 100%;
     background-color: white;
     color: black;
