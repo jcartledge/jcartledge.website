@@ -6,7 +6,7 @@
   padding: 1.5em 0;
   border-radius: 25px;
   border: 5px solid white;
-  box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.1);
   margin: 2em auto;
   font-family: 'Montserrat', sans-serif
 }
@@ -47,10 +47,15 @@
   }
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 30, 0, 0.9);
+  background-color: rgba(255, 255, 250, 1.0)
+}
 article {
   font-size: 17px
 }
-
 article > p {
   text-align: center;
   font-family: "Aleo", serif;
@@ -60,18 +65,16 @@ article > p {
   font-size: 1em;
   line-height: 1.25em;
 }
-
 article > p.first {
   font-weight: 700;
-  font-size: 1.15em;
+  font-size: 1.14em;
 }
-
 article > hr {
   max-width: 200px;
   margin-top: 2em;
   border: 0;
   border-bottom: 2px dotted darkseagreen;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 320px) {
