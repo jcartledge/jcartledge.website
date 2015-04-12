@@ -47,18 +47,23 @@
   }
 }
 
+article {
+  font-size: 17px
+}
+
 article > p {
   text-align: center;
-  font-family: Sanchez, serif;
+  font-family: "Aleo", serif;
   max-width: 570px;
   margin: 1.5em auto;
   text-align: justify;
   font-size: 1em;
+  line-height: 1.25em;
 }
 
 article > p.first {
-  font-weight: bold;
-  font-size: 1.1em;
+  font-weight: 700;
+  font-size: 1.15em;
 }
 
 article > hr {
