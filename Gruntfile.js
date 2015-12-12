@@ -47,7 +47,10 @@ module.exports = function (grunt) {
         options: {
           browserifyOptions: {
             debug: true
-          }
+          },
+          transform: [
+            ['babelify', {presets: ['es2015']}]
+          ]
         },
         files: files('js')
       }
@@ -132,5 +135,4 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['jade', 'browserify', 'less', 'copy']);
   grunt.registerTask('deploy', ['clean', 'build', 'gh-pages']);
   grunt.registerTask('default', ['clean', 'build', 'connect', 'watch']);
-
 };
