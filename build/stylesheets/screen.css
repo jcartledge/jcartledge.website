@@ -8,9 +8,8 @@
   border: 5px solid white;
   box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.1);
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
 }
-
 .hello-sticker > .hello {
   display: block;
   line-height: 0;
@@ -19,13 +18,11 @@
   margin: .4em 0;
   font-weight: bold;
 }
-
 .hello-sticker > .mynameis {
   display: block;
   font-size: 24px;
   margin: .4em 0;
 }
-
 .hello-sticker > .name {
   display: block;
   width: 100%;
@@ -37,7 +34,6 @@
   margin: 0;
   text-align: center;
 }
-
 @media (max-width: 320px) {
   .hello-sticker > .hello {
     font-size: 32px;
@@ -49,20 +45,17 @@
     font-size: 22px;
   }
 }
-
-html, body {
+html,
+body {
   color: rgba(0, 30, 0, 0.9);
-  background-color: rgba(255, 255, 250, 1.0);
+  background-color: #fffffa;
 }
-
 header {
   padding-top: 2em;
 }
-
 article {
-  font-size: 17px
+  font-size: 17px;
 }
-
 article > p {
   text-align: center;
   font-family: "Aleo", serif;
@@ -72,12 +65,10 @@ article > p {
   font-size: 1em;
   line-height: 1.25em;
 }
-
 article > p:first-child {
   font-weight: 700;
   font-size: 1.14em;
 }
-
 article > hr {
   max-width: 200px;
   margin-top: 2em;
@@ -85,11 +76,8 @@ article > hr {
   border-bottom: 2px dotted darkseagreen;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 }
-
 @media (max-width: 320px) {
   body {
     margin: 1.5em;
   }
 }
-
-/*# sourceMappingURL=screen.css.map */
