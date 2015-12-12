@@ -45,6 +45,14 @@
     font-size: 22px;
   }
 }
+.link--ext:after {
+  content: '\f14c';
+  font-family: FontAwesome;
+  font-size: small;
+  display: inline-block;
+  margin-left: 0.25em;
+  opacity: 0.25;
+}
 html,
 body {
   color: rgba(0, 30, 0, 0.9);
