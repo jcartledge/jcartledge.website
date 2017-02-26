@@ -1,12 +1,13 @@
 'use strict';
 
-import $ from 'jquery';
+import on from 'event-listener';
 
-$(() => {
+on(document, 'DOMContentLoaded', _ => {
   let host = window.location.host;
-  $('a').each((_, a) => {
+  document.querySelectorAll('a').forEach(a => {
     if (a.host !== host) {
-      $(a).addClass('link--ext').attr('target', '_blank');
+      a.classList.add('link--ext');
+      a.setAttribute('target', '_blank');
     }
   });
 });

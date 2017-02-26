@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     browsers: ['last 4 versions', 'IOS 6']
   });
 
-  var copyFiles = ['**', '!**/_*', '!**/_**/*', '!**/*.{js,jade,less}'];
+  var copyFiles = ['**', '!**/_*', '!**/_**/*', '!**/*.{js,pug,less}'];
   var dataFiles = 'data/**/*.{yaml,yml,json}';
 
   function files (inExt, outExt) {
@@ -20,26 +20,7 @@ module.exports = function (grunt) {
     return [_files];
   }
 
-  var jadeFiles = files('jade', 'html');
-
-  function loadData (dataFiles) {
-    var plasma = new (require('plasma'))();
-    function yamlLoader (fp) {
-      return require('js-yaml').safeLoad(require('fs').readFileSync(fp, 'utf8'));
-    }
-    plasma.dataLoader('yml', yamlLoader);
-    plasma.dataLoader('yaml', yamlLoader);
-    plasma.load(dataFiles);
-    return plasma.data;
-  }
-
-  function dataForTemplate (dest, src) {
-    return {
-      sitemap: [],
-      currentPage: dest,
-      data: loadData(dataFiles)
-    };
-  }
+  var pugFiles = files('pug', 'html');
 
   grunt.initConfig({
     browserify: {
@@ -84,12 +65,9 @@ module.exports = function (grunt) {
       },
       src: ['**']
     },
-    jade: {
-      options: {
-        data: dataForTemplate
-      },
+    pug: {
       compile: {
-        files: jadeFiles
+        files: pugFiles
       }
     },
     less: {
@@ -106,9 +84,9 @@ module.exports = function (grunt) {
         livereloadOnError: false,
         cwd: 'src'
       },
-      jade: {
-        files: ['../' + dataFiles, '**/*.{jade,md}'],
-        tasks: ['jade']
+      pug: {
+        files: ['../' + dataFiles, '**/*.{pug,md}'],
+        tasks: ['pug']
       },
       browserify: {
         files: ['**/*.js'],
@@ -132,7 +110,7 @@ module.exports = function (grunt) {
   });
 
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('build', ['jade', 'browserify', 'less', 'copy']);
+  grunt.registerTask('build', ['pug', 'browserify', 'less', 'copy']);
   grunt.registerTask('deploy', ['clean', 'build', 'gh-pages']);
   grunt.registerTask('default', ['clean', 'build', 'connect', 'watch']);
 };
